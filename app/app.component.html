@@ -2,7 +2,11 @@
 <div class="jumbotron">
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2">
-            <div *ngIf="message" class="alert alert-success">{{message.text}}</div>
+            <div *ngIf="message1" class="alert alert-success">{{message1.text}}</div>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div *ngIf="message2" class="alert alert-info">{{message2.text}}</div>
             <router-outlet></router-outlet>
         </div>
     </div>

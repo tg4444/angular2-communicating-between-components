@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MessageService } from '../_services/index';
+import { QueueService } from '../_services/index';
 
 @Component({
     moduleId: module.id,
@@ -8,15 +8,29 @@ import { MessageService } from '../_services/index';
 })
 
 export class HomeComponent {
-    constructor(private messageService: MessageService) {}
+    constructor(private queueService: QueueService) {}
     
-    sendMessage(): void {
+    sendMessage1(): void {
         // send message to subscribers via observable subject
-        this.messageService.sendMessage('Message from Home Component to App Component!');
+        var message = new Object();
+        message['text'] = 'This goes to queue1';
+        this.queueService.send('queue1', message);
     }
 
-    clearMessage(): void {
+    clearMessage1(): void {
         // clear message
-        this.messageService.clearMessage();
+        this.queueService.clear('queue1');
+    }
+
+    sendMessage2(): void {
+        // send message to subscribers via observable subject
+        var message = new Object();
+        message['text'] = 'This goes to queue2';
+        this.queueService.send('queue2', message);
+    }
+
+    clearMessage2(): void {
+        // clear message
+        this.queueService.clear('queue2');
     }
 }
