@@ -4,6 +4,7 @@ import { QueueService } from '../_services/index';
 
 @Component({
     moduleId: module.id,
+    selector: 'home',
     templateUrl: 'home.component.html'
 })
 

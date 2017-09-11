@@ -1,0 +1,14 @@
+<!-- main app container -->
+<div style="background:#444444;padding:40px;">
+    <div style="color:#eeeeee;font-size:32px">Subscriber2</div>
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div *ngIf="message1a" class="alert alert-success">{{message1a.text}}</div>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div *ngIf="message2a" class="alert alert-info">{{message2a.text}}</div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

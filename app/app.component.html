@@ -1,5 +1,6 @@
 <!-- main app container -->
-<div class="jumbotron">
+<div class="jumbotron" style="padding:40px;">
+    <div style="color:#222222;font-size:32px">Subscriber1</div>
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2">
             <div *ngIf="message1" class="alert alert-success">{{message1.text}}</div>
@@ -12,12 +13,5 @@
     </div>
 </div>
 
-<!-- credits -->
-<div class="text-center">
-    <p>
-        <a href="http://jasonwatmore.com/post/2016/12/01/angular-2-communicating-between-components-with-observable-subject" target="_top">Angular 2 - Communicating Between Components with Observable & Subject</a>
-    </p>
-    <p>
-        <a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>
-    </p>
-</div>
+<app2>APP2</app2>
+<home>APP2</home>
